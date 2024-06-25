@@ -1,10 +1,11 @@
 /* src/App.css */
 .App {
   text-align: center;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
