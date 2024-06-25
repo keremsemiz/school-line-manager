@@ -4,7 +4,10 @@ function Welcome(){
 
 
     return(
-        <h1>test</h1>
+        <div classname="container">
+            <h1>Welcome to the NMS Cafeteria Manager</h1>
+            <h3>Please wait 5 seconds to get started</h3>
+        </div>
     );
 }
 export default Welcome

@@ -8,10 +8,10 @@ from collections import defaultdict
 
 app = FastAPI()
 
-# Add CORS middleware
+# not needed technically but keep for dev purposes
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins for simplicity during development
+    allow_origins=["*"], 
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -23,6 +23,8 @@ today = datetime.now(BERLIN_TZ).date()
 start_time = BERLIN_TZ.localize(datetime.combine(today, time(8, 0)))
 end_time = BERLIN_TZ.localize(datetime.combine(today, time(15, 0)))
 TIME_SLOTS = []
+
+
 
 current_time = start_time
 while current_time < end_time:
@@ -48,7 +50,7 @@ async def shutdown_event():
             await clear_data_task
         except asyncio.CancelledError:
             pass
-        print("Periodic data clearing task has been cancelled.")
+        print("Data clearing cancelled")
 
 @app.get("/")
 async def root():
