@@ -30,11 +30,13 @@ const WebcamCapture = () => {
           const name = extractName(text);
           setText(name);
           fetchTimeSlot(name);
+        }).catch(err => {
+          console.error('Error recognizing text:', err);
         });
       }
     };
 
-    const interval = setInterval(recognizeText, 10000); // Recognize text every 10 seconds
+    const interval = setInterval(recognizeText, 5000); 
 
     return () => clearInterval(interval);
   }, []);
@@ -59,7 +61,7 @@ const WebcamCapture = () => {
   };
 
   const fetchTimeSlot = (name) => {
-    const url = `http://localhost:8000/getTimeSlot?q=${encodeURIComponent(name)}`;
+    const url = `https://nms-cafeteria-management-system.onrender.com/getTimeSlot?q=${encodeURIComponent(name)}`;
     axios.get(url)
       .then(response => {
         console.log(response);
@@ -88,12 +90,6 @@ const WebcamCapture = () => {
         <h2>Detected Name:</h2>
         <div>{text}</div>
       </div>
-      {croppedImage && (
-        <div>
-          <h2>Cropped Image:</h2>
-          <img src={croppedImage} alt="Cropped region" />
-        </div>
-      )}
       <div>
         <h2>Assigned Time Slot:</h2>
         <div>{timeSlot}</div>
@@ -102,4 +98,4 @@ const WebcamCapture = () => {
   );
 };
 
-export default WebcamCapture;
+export default WebcamCapture
