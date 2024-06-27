@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Webcam from 'react-webcam';
 import Tesseract from 'tesseract.js';
 import axios from 'axios';
+import './WebcamCapture.css';
 
 const WebcamCapture = () => {
   const webcamRef = useRef(null);
