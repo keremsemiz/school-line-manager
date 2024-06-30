@@ -20,7 +20,7 @@ function Welcome() {
         <p className="headerText">Made by Kerem & Vibbodh 10d</p>
         <p className="headerText">{currentDate}</p>
       </div>
-      <h2 className="title">Welcome to the NMS Cafeteria Manager</h2>
+      <h2 className="title">Welcome to the NMS Cafeteria System!</h2>
       <p>Please wait 5 seconds to get started</p>
     </div>
   );

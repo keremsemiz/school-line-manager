@@ -1,0 +1,38 @@
+.containerWebcam {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 20px;
+    background-color: rgba(47, 47, 47, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+  
+.camera {
+    margin-right: 20px;
+}
+  
+.text-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+  
+.text-container > div {
+    margin-bottom: 20px;
+}
+  
+h2 {
+    margin: 10px 0;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.infoText{
+    padding-top: 1rem;
+    font-size: 1rem;
+}

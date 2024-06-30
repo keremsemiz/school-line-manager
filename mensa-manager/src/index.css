@@ -34,10 +34,9 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   background-image: url('./assets/pngpattern.webp');
-  background-size: cover;
-  background-position: center;
-  background-color: #1d1d1d;
-  background-size: 10%;
+  background: rgb(9,9,121);
+  background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(0,165,199,1) 100%);
+  background-size: 100%;
   transition: background-size 0.4s ease;
 }
 
