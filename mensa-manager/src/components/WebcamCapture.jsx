@@ -2,6 +2,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import Webcam from 'react-webcam';
 import Tesseract from 'tesseract.js';
 import axios from 'axios';
+import './WebcamCapture.css';
 
 const WebcamCapture = () => {
   const webcamRef = useRef(null);
@@ -17,7 +18,7 @@ const WebcamCapture = () => {
         webcamRef.current.video.readyState === 4
       ) {
         const screenshot = webcamRef.current.getScreenshot();
-        const cropped = await cropImage(screenshot, { x: 200, y: 240, width: 300, height: 50 }); // Adjust coordinates based on your image
+        const cropped = await cropImage(screenshot, { x: 250, y: 249, width: 100, height: 10 });
         setCroppedImage(cropped);
 
         Tesseract.recognize(
@@ -61,7 +62,8 @@ const WebcamCapture = () => {
   };
 
   const fetchTimeSlot = (name) => {
-    const url = `https://nms-cafeteria-management-system.onrender.com/getTimeSlot?q=${encodeURIComponent(name)}`;
+    const url = `test`;
+    // http://0.0.0.0:8000/getTimeSlot?q=${encodeURIComponent(name)}
     axios.get(url)
       .then(response => {
         console.log(response);
@@ -93,6 +95,10 @@ const WebcamCapture = () => {
       <div>
         <h2>Assigned Time Slot:</h2>
         <div>{timeSlot}</div>
+      </div>
+      <div>
+        <h2>Cropped Image:</h2>
+        {croppedImage && <img src={croppedImage} alt="Cropped" />}
       </div>
     </div>
   );
