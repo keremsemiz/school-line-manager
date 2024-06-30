@@ -1,34 +1,79 @@
+body {
+  background-color: #f0f2f5;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 .weekly-plan {
-    font-family: Arial, sans-serif;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .meal-plan {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.weekly-plan h1 {
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 2.5em;
+}
+
+.meal-plan {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.day-plan {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: calc(33% - 20px);
+  transition: transform 0.3s ease;
+}
+
+.day-plan:hover {
+  transform: translateY(-10px);
+}
+
+.day-plan h2 {
+  color: #ff6347;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.meal-item {
+  margin-bottom: 20px;
+}
+
+.meal-item h3 {
+  color: #007BFF;
+  font-size: 1.2em;
+}
+
+.meal-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.meal-item p {
+  color: #555;
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
   .day-plan {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    margin: 10px;
-    padding: 20px;
-    width: 200px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 20px);
   }
-  
-  .day-plan h2 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 480px) {
+  .day-plan {
+    width: 100%;
   }
-  
-  .day-plan p {
-    font-size: 1em;
-    margin: 5px 0;
-  }
-  
+}
