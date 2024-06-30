@@ -82,14 +82,14 @@
     return (
       <div className="mainContainer">
         <div className='containerWebcam'>
-            <div className="camera">
-          <Webcam
-            audio={false}
-            ref={webcamRef}
-            screenshotFormat="image/jpeg"
-            width={640}
-            height={480}
-          />
+          <div className="camera">
+            <Webcam
+              audio={false}
+              ref={webcamRef}
+              screenshotFormat="image/jpeg"
+              width={640}
+              height={480}
+            />
           </div>
           <div className='text-container'>
             <h3>Detected Name:</h3>
@@ -102,8 +102,8 @@
         </div>
         <div className="imageContainers">
           <div className='containerImg'>
-              <p className='imgText'>Scan for more project information!</p>
-              <img src="src\assets\qrcode_github.com.png" alt="" />
+            <p className='imgText'>Scan for more project information!</p>
+            <img src="src\assets\qrcode_github.com.png" alt="" />
           </div>
           <div className='containerImg'>
             <p className='imgText'>Built using:</p>
@@ -111,7 +111,7 @@
             <img className='fastImg' src="src\assets\fastapi.png" alt="" />
           </div>
         </div>
-        </div>
+      </div>
     );
   };
 

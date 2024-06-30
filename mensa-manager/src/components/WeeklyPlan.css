@@ -1,0 +1,34 @@
+.weekly-plan {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .meal-plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .day-plan {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .day-plan h2 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .day-plan p {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+  

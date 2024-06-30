@@ -18,10 +18,11 @@ function Welcome() {
     <div className="container">
       <div className="header">
         <p className="headerText">Made by Kerem & Vibbodh 10d</p>
+        <h2 className="title">Welcome to the NMS Cafeteria System!</h2>
         <p className="headerText">{currentDate}</p>
       </div>
-      <h2 className="title">Welcome to the NMS Cafeteria System!</h2>
-      <p>Please wait 5 seconds to get started</p>
+      <p className='seconds'>Please take a photo of your timeslot
+      and return at the designated time.</p>
     </div>
   );
 }
