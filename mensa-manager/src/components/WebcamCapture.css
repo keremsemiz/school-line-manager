@@ -36,3 +36,34 @@ img {
     padding-top: 1rem;
     font-size: 1rem;
 }
+.mainContainer{
+    display: flex;
+    gap: 5rem;
+}
+img{
+    width: 100%;
+}
+.containerImg{
+    gap: 2rem;
+    height: 14rem;
+    width: 10rem;
+    padding: 20px;
+    background-color: rgba(47, 47, 47, 0.5);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    align-items: center;
+}
+.imgText{
+    margin-top: 0rem;
+    font-size: 1rem;
+}
+.imageContainers{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.reactImg{
+    margin-left: 1.5rem;
+    width: 7rem;
+    height: 5rem;
+}
