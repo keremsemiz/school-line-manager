@@ -22,7 +22,7 @@ An easy-to-use solution for monitoring school cafeteria lines using computer vis
 
 ## 📋 Usage
 
-0. Before Installing locally, try the deployed version here: 
+0. Before Installing locally, try the deployed version here: https://schoollineocr-tesseract.netlify.app/mensa-manager
 
 1. **Clone the repository**:
    ```bash
